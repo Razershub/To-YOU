@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0d0d0d;
+      color: #f2f2f2;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+    .message {
+      display: none;
+      max-width: 800px;
+      text-align: left;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      font-size: 1.1rem;
+      white-space: pre-wrap;
+    }
+    button {
+      background: #1a1a1a;
+      border: 1px solid #444;
+      color: #f2f2f2;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #333;
+    }
+  </style>
+</head>
+<body>
+  <h3>The final msg</h3>
+  <div id="message" class="message"></div>
+  <button id="nextBtn">continue</button>
+
+  <script>
+    const parts = [
+      `hello disha
+tbh i want to end this.
+this isn’t sudden. it’s not anger speaking.
+it’s something that’s been quietly building inside me for a long time.
+we both have flaws—opposite ones—and they keep pushing us apart no matter how hard we try to hold on.`,
+
+      `tara pn magaj ma aivu hatu ke maybe ending this is the only way.
+i’m just being the one to finally put it into words.
+every time i try to trust again, it breaks.
+23 april varnika no birthday hato.mai msg kairo?? i didn’t.
+not because i didn’t remember, but because i knew what it would mean for us.`,
+
+      `vrushank walu—you promised you won’t talk to him.
+but you still did.
+not by accident—you made a choice.
+then yug—you searched for his account(tara account me search section ma top pr eej che). told hetvi you needed to talk to him.
+then prashant—you sent your photo, and didn’t tell me.
+and what hurts most is that you knew it was wrong—but still did it.`,
+
+      `you say, “how many times should i prove trust?”
+maybe ask instead—how many times did you break it?
+how many times did i forgive without saying a word, just because i loved you?
+i kept fighting for us because of that love. because i saw a future.
+because i believed maybe we’d find our way through all this.`,
+
+      `but i’ve realized—love alone can’t carry everything.
+and i’m not saying i’m blameless. i’ve made mistakes too.
+i've hurted you many times.
+i’m trying to grow from that. but this isn’t about blame anymore.
+it’s about peace. about survival.
+and this truth hurts more than anything:
+i know i won’t be able to live without you.`,
+
+      `but i NEED to.
+because staying in something that keeps breaking me isn’t love—it’s slow destruction.
+i owe myself more than that.
+and so do you.
+i’m not saying you’re a bad person.
+i’m saying we’re not right for each other.`,
+
+      `don’t send me explanations. don’t ask what went wrong.
+don’t guilt me. don’t say “i deserve to be alone.”
+i never said that. i never wanted that for you.
+but we’re not helping each other anymore.
+our personalities clash.
+our values keep hurting each other.`,
+
+      `you said “i talk to you even when i’m with friends.”
+i do too—except when i’m with my brother.
+he matters more to me than anyone else.
+more than you. more than even myself.
+and if i can be good for him,
+thats all i want.`,
+
+      `so i’m letting go. not because i want to, but because i have to.
+i love you. deeply. and i always will.
+but now, i’ll learn to live without you—even if it breaks me.
+please don’t send messages through hetvi or anyone else.
+and my heart is done with guilt trips now.`,
+
+      `bbg, i still love you just as much as i did on the very first day—maybe even more.
+please don’t think for a second that i don’t like you anymore or that my feelings disappeared.
+it’s not about that. it’s about the truth that we’ve both felt but never wanted to admit
+we just can’t have a relationship together.
+we’re too different, too opposite, and no matter how much love there is,
+it keeps pulling us in different directions.`,
+
+      `so baby now it is and properly thinked desicion that its time for it-
+GOODBYE. I LOVE YOU MY CAFFIENE.`
+    ];
+
+    let index = 0;
+    const msgBox = document.getElementById('message');
+    const nextBtn = document.getElementById('nextBtn');
+
+    nextBtn.addEventListener('click', () => {
+      if (index < parts.length) {
+        msgBox.innerText = parts[index];
+        msgBox.style.display = 'block';
+        index++;
+        if (index === parts.length) {
+          nextBtn.innerText = 'Close';
+        }
+      } else {
+        document.body.innerHTML = "<h2 style='color: white;'>Thank you for reading.</h2>";
+      }
+    });
+  </script>
+</body>
+</html>
